@@ -1,11 +1,9 @@
 
 import React from 'react';
-import Header from '../components/Header';
 import Search from '../components/Search';
 import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
-import Footer from '../components/Footer';
 import Loader from '../components/Loader';
 
 import useInitialState from '../hooks/useInitialState';
@@ -18,8 +16,7 @@ const Home = () => {
   // eslint-disable-next-line react/react-in-jsx-scope
   return initialState.length === 0 ? <Loader /> : (
     // eslint-disable-next-line react/react-in-jsx-scope
-    <div className='App'>
-      <Header />
+    <>
       <Search />
 
       {initialState.mylist.length > 0 && (
@@ -43,9 +40,7 @@ const Home = () => {
           {initialState.originals.map((item) => <CarouselItem key={item.id} {...item} />,)}
         </Carousel>
       </Categories>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 
