@@ -4,7 +4,6 @@ import Search from '../components/Search';
 import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
-// import useInitialState from '../hooks/useInitialState';
 import '../assets/styles/App.scss';
 
 const Home = ({ myList, trends, originals }) => {
@@ -12,10 +11,14 @@ const Home = ({ myList, trends, originals }) => {
     <>
       <Search />
       {myList.length > 0 && (
-      <Categories title="Mi Lista">
+      <Categories title='Mi Lista'>
           <Carousel>
             {myList.map(item =>
-              <CarouselItem key={item.id} {...item} />
+              <CarouselItem
+                key={item.id}
+                {...item}
+                isList
+              />
             )}
           </Carousel>
       </Categories>
