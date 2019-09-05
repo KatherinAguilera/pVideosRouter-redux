@@ -31,9 +31,10 @@
 
 .login__container--remember-me {
   color: white;
-  display: flex;
-  justify-content: space-between;
   margin-top: 10px;
+}
+.login__container--remember-me label {
+  margin-right: 10px;
 }
 
 .login__container--remember-me a {
