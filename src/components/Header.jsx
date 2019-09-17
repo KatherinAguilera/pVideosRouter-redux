@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import gravatar from '../utils/gravatar';
 import { logoutRequest } from '../actions';
 import '../assets/styles/components/Header.scss';
-import logo from '../assets/static/logo-platzi-video-BW2.png';
+import logo from '../assets/static/logo-platzi-video-BW2 - copia.png';
 import userIcon from '../assets/static/user-icon.png';
 
 const Header = (props) => {
@@ -22,7 +22,7 @@ const Header = (props) => {
   return (
     <header className={headerClass}>
       <Link to='/'>
-        <img className='header__img' src={logo} alt='Platzi Video' />
+        <img className='header__img' src={logo} alt='Platzi Video' width='100' heigth='200' />
       </Link>
       <div className='header__menu'>
         <div className='header__menu--profile'>
@@ -40,7 +40,7 @@ const Header = (props) => {
               <li>
                 <Link to='/login'>
                 Iniciar sesión
-                              </Link>
+                </Link>
               </li>
             )}
         </ul>

@@ -51,8 +51,9 @@ const Login = (props) => {
               <label>
                 <input type='checkbox' id='cbox1' value='first_checkbox' />
                 {' '}
+{' '}
 Recuérdame
-              </label>
+</label>
               <a href='/'>Olvidé mi contraseña</a>
             </div>
           </form>
@@ -60,17 +61,17 @@ Recuérdame
             <div>
               <img src={googleIcon} />
               {' '}
-Inicia sesión con Google
+                Inicia sesión con Google
             </div>
             <div>
               <img src={twitterIcon} />
               {' '}
-Inicia sesión con Twitter
+                Inicia sesión con Twitter
             </div>
           </section>
           <p className='login__container--register'>
               No tienes ninguna cuenta
-            <Link to='/register'>
+            <Link to='/register' className='toRegister'>
                 Regístrate
             </Link>
           </p>
